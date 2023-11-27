@@ -8,26 +8,34 @@
 import SwiftUI
 import CountryFlag
 
-
 struct CustomTextField: View {
 
     @Binding var selectedSegment: Int
     @Binding var currentCountry: CountryFlag
+    private let maxCharCount = 15
     @State var text = ""
 
     var body: some View {
         HStack {
-            HStack {
-                currentCountry.getCountryImage(with: FlagType(rawValue: selectedSegment) ?? .roundedRect)
-                    .frame(width: 30)
-                Divider()
-                    .frame(height: 15)
-            }
-            TextField(".", text: $text)
+            currentCountry.getCountryImage(with: FlagType(rawValue: selectedSegment) ?? .roundedRect)
+                .frame(width: 30)
+            Divider()
+                .frame(height: 15)
+            TextField("", text: $text)
+                .keyboardType(.numberPad)
                 .foregroundColor(.black)
         }
         .onChange(of: currentCountry) { value in
             text = value.countryDialCode
+        }
+        .onChange(of: text) { value in
+            if value.count < currentCountry.countryDialCode.count {
+                text = currentCountry.countryDialCode
+            }
+            if value.count > maxCharCount {
+                text = String(value.prefix(maxCharCount))
+            }
+            text = text.filter {"+0123456789".contains($0)}
         }
         .onAppear(perform: {
             text = currentCountry.countryDialCode
@@ -39,7 +47,7 @@ struct CustomTextField: View {
 }
 
 struct ListOfCountries: View {
-    @Binding var allCountries: [CountryFlag]
+    var allCountries: [CountryFlag]
     @Binding var currentCountry: CountryFlag
     @Binding var selectedSegment: Int
 
@@ -77,10 +85,14 @@ struct FlagTypePicker: View {
 
 
 struct ContentView: View {
-    @State var allCountries = CountryFlags().all
-    @State var currentCountry: CountryFlag?
+    @State var currentCountry: CountryFlag
     @State private var selectedSegment = 0
     @State private var text = ""
+    private var allCountries = CountryFlags().all
+
+    init() {
+        currentCountry = allCountries.first ?? CountryFlag.defaultValue
+    }
 
     var body: some View {
         VStack {
@@ -90,16 +102,16 @@ struct ContentView: View {
             VStack(spacing: 30) {
                 FlagTypePicker(selectedSegment: $selectedSegment)
                 VStack {
-                    CustomTextField(selectedSegment: $selectedSegment, currentCountry: $currentCountry.toUnwrapped(defaultValue: allCountries[0]))
-                    ListOfCountries(allCountries: $allCountries, currentCountry: $currentCountry.toUnwrapped(defaultValue: allCountries[0]), selectedSegment: $selectedSegment)
+                    CustomTextField(selectedSegment: $selectedSegment, currentCountry: $currentCountry)
+                    ListOfCountries(allCountries: allCountries, currentCountry: $currentCountry, selectedSegment: $selectedSegment)
                     Spacer()
                 }
             }
 
         }
         .onAppear(perform: {
-            currentCountry = allCountries[0]
-            text = currentCountry?.countryDialCode ?? ""
+            currentCountry = allCountries.first ?? CountryFlag.defaultValue
+            text = currentCountry.countryDialCode
         })
         .padding()
     }

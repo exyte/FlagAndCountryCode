@@ -24,6 +24,12 @@ extension CountryFlag {
 }
 #endif
 
+extension CountryFlag {
+    public static var defaultValue: CountryFlag {
+        Self(countryCode: "AU", countryName: "Australia", countryDialCode: "+61")
+    }
+}
+
 public struct CountryFlag: Decodable, Hashable {
     /**
      Country 2 letter code
@@ -58,3 +64,4 @@ public struct CountryFlag: Decodable, Hashable {
         case countryDialCode = "dial_code"
     }
 }
+

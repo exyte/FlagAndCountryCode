@@ -12,7 +12,6 @@
 		E674BB6A2B10702F003D6D71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E674BB692B10702F003D6D71 /* Assets.xcassets */; };
 		E674BB6D2B10702F003D6D71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E674BB6C2B10702F003D6D71 /* Preview Assets.xcassets */; };
 		E674BB7A2B107049003D6D71 /* CountryFlag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E674BB782B10703E003D6D71 /* CountryFlag.framework */; };
-		E674BB7D2B10718A003D6D71 /* Binding+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BB7C2B10718A003D6D71 /* Binding+Extensions.swift */; };
 		E674BB7F2B10719F003D6D71 /* FlagType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BB7E2B10719F003D6D71 /* FlagType+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +32,6 @@
 		E674BB692B10702F003D6D71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E674BB6C2B10702F003D6D71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E674BB732B10703E003D6D71 /* CountryFlag.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CountryFlag.xcodeproj; path = ../CountryFlag.xcodeproj; sourceTree = "<group>"; };
-		E674BB7C2B10718A003D6D71 /* Binding+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extensions.swift"; sourceTree = "<group>"; };
 		E674BB7E2B10719F003D6D71 /* FlagType+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlagType+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,7 +103,6 @@
 		E674BB7B2B10717B003D6D71 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E674BB7C2B10718A003D6D71 /* Binding+Extensions.swift */,
 				E674BB7E2B10719F003D6D71 /* FlagType+Extensions.swift */,
 			);
 			path = Extensions;
@@ -197,7 +194,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E674BB7D2B10718A003D6D71 /* Binding+Extensions.swift in Sources */,
 				E674BB682B10702D003D6D71 /* ContentView.swift in Sources */,
 				E674BB662B10702D003D6D71 /* ExampleApp.swift in Sources */,
 				E674BB7F2B10719F003D6D71 /* FlagType+Extensions.swift in Sources */,
