@@ -11,15 +11,14 @@ public class CountryFlagsParser {
 
     /// Get Country-Flags  from JSON
     /// - Returns: Array of countryFlags
-    public func getParsedData() -> [CountryFlag] {
-        guard let jsonPath = Bundle(for: Self.self).path(forResource: "country-codes", ofType: "json") else { return [] }
+    public func getParsedData() -> [CountryFlagInfo]? {
+        guard let jsonPath = Bundle(for: Self.self).path(forResource: "country-codes", ofType: "json") else { return nil }
 
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: jsonPath))
-            return try JSONDecoder().decode([CountryFlag].self, from: data)
+            return try JSONDecoder().decode([CountryFlagInfo].self, from: data)
         } catch {
-            print(error)
+            return nil
         }
-        return []
     }
 }

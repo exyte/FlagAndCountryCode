@@ -5,17 +5,19 @@
 //  Created by vadim.vitkovskiy on 21.11.2023.
 //
 
+
+#if canImport(UIKit)
 import UIKit
 
 internal extension UIImage {
     func rendereredImage(size outputSize: CGSize, action: (UIGraphicsImageRendererContext) -> Void) -> UIImage {
         let format = UIGraphicsImageRendererFormat()
         format.scale = scale
-        
+
         let renderer = UIGraphicsImageRenderer(size: outputSize, format: format)
         return renderer.image(actions: { (context) in
             action(context)
-            
+
             // Draw image centered in the renderer
             let bounds = context.format.bounds
             let rect = CGRect(x: (bounds.size.width - size.width) / 2,
@@ -43,3 +45,31 @@ internal extension UIImage {
         })
     }
 }
+
+#endif
+
+
+#if canImport(SwiftUI)
+import SwiftUI
+
+internal extension Image {
+    func applyFlagType(_ type: FlagType) -> some View {
+        switch type {
+        case .circle:
+            return AnyView(self
+                .frame(width: type.size.width, height: type.size.height)
+                .clipShape(Circle()))
+        case .square:
+            return AnyView(self
+                .frame(width: type.size.width, height: type.size.height)
+                .clipShape(Rectangle()))
+        case .roundedRect:
+            return AnyView(self
+                .frame(width: type.size.width, height: type.size.height)
+                .clipShape(RoundedRectangle(cornerRadius: 2)))
+        }
+    }
+}
+
+
+#endif

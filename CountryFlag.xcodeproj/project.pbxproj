@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E64C57E02B1495AC00002567 /* CountryFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64C57DF2B1495AC00002567 /* CountryFlags.swift */; };
 		E674BAEF2B0C9FC5003D6D71 /* CountryFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = E674BAEE2B0C9FC5003D6D71 /* CountryFlags.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E674BAF62B0C9FD1003D6D71 /* CountryFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BAF52B0C9FD1003D6D71 /* CountryFlags.swift */; };
 		E674BB1A2B0CA1CA003D6D71 /* FlagType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BB192B0CA1CA003D6D71 /* FlagType.swift */; };
-		E674BB1D2B0CA237003D6D71 /* CountyFlags.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E674BB1C2B0CA237003D6D71 /* CountyFlags.xcassets */; };
+		E674BB1D2B0CA237003D6D71 /* CountryFlags.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E674BB1C2B0CA237003D6D71 /* CountryFlags.xcassets */; };
 		E674BB1F2B0CA27A003D6D71 /* country-codes.json in Resources */ = {isa = PBXBuildFile; fileRef = E674BB1E2B0CA27A003D6D71 /* country-codes.json */; };
 		E674BB222B0CA513003D6D71 /* CountryFlagsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BB212B0CA513003D6D71 /* CountryFlagsParser.swift */; };
-		E674BB242B0CA552003D6D71 /* CountryFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BB232B0CA552003D6D71 /* CountryFlag.swift */; };
-		E674BB262B0CAE88003D6D71 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BB252B0CAE88003D6D71 /* UIImage.swift */; };
+		E674BB242B0CA552003D6D71 /* CountryFlagInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BB232B0CA552003D6D71 /* CountryFlagInfo.swift */; };
+		E674BB262B0CAE88003D6D71 /* ImageRendered.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BB252B0CAE88003D6D71 /* ImageRendered.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E64C57DF2B1495AC00002567 /* CountryFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlags.swift; sourceTree = "<group>"; };
 		E674BAEB2B0C9FC5003D6D71 /* CountryFlag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CountryFlag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E674BAEE2B0C9FC5003D6D71 /* CountryFlags.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryFlags.h; sourceTree = "<group>"; };
-		E674BAF52B0C9FD1003D6D71 /* CountryFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlags.swift; sourceTree = "<group>"; };
 		E674BB192B0CA1CA003D6D71 /* FlagType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagType.swift; sourceTree = "<group>"; };
-		E674BB1C2B0CA237003D6D71 /* CountyFlags.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CountyFlags.xcassets; sourceTree = "<group>"; };
+		E674BB1C2B0CA237003D6D71 /* CountryFlags.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CountryFlags.xcassets; sourceTree = "<group>"; };
 		E674BB1E2B0CA27A003D6D71 /* country-codes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "country-codes.json"; sourceTree = "<group>"; };
 		E674BB212B0CA513003D6D71 /* CountryFlagsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlagsParser.swift; sourceTree = "<group>"; };
-		E674BB232B0CA552003D6D71 /* CountryFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlag.swift; sourceTree = "<group>"; };
-		E674BB252B0CAE88003D6D71 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		E674BB232B0CA552003D6D71 /* CountryFlagInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlagInfo.swift; sourceTree = "<group>"; };
+		E674BB252B0CAE88003D6D71 /* ImageRendered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRendered.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +59,7 @@
 		E674BAED2B0C9FC5003D6D71 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				E674BAF52B0C9FD1003D6D71 /* CountryFlags.swift */,
-				E674BB232B0CA552003D6D71 /* CountryFlag.swift */,
+				E674BB232B0CA552003D6D71 /* CountryFlagInfo.swift */,
 				E674BAEE2B0C9FC5003D6D71 /* CountryFlags.h */,
 				E674BB192B0CA1CA003D6D71 /* FlagType.swift */,
 				E674BB202B0CA4FF003D6D71 /* Helpers */,
@@ -72,7 +71,7 @@
 		E674BB1B2B0CA227003D6D71 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E674BB1C2B0CA237003D6D71 /* CountyFlags.xcassets */,
+				E674BB1C2B0CA237003D6D71 /* CountryFlags.xcassets */,
 				E674BB1E2B0CA27A003D6D71 /* country-codes.json */,
 			);
 			path = Resources;
@@ -82,7 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				E674BB212B0CA513003D6D71 /* CountryFlagsParser.swift */,
-				E674BB252B0CAE88003D6D71 /* UIImage.swift */,
+				E674BB252B0CAE88003D6D71 /* ImageRendered.swift */,
+				E64C57DF2B1495AC00002567 /* CountryFlags.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -157,7 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E674BB1D2B0CA237003D6D71 /* CountyFlags.xcassets in Resources */,
+				E674BB1D2B0CA237003D6D71 /* CountryFlags.xcassets in Resources */,
 				E674BB1F2B0CA27A003D6D71 /* country-codes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,10 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E674BAF62B0C9FD1003D6D71 /* CountryFlags.swift in Sources */,
-				E674BB262B0CAE88003D6D71 /* UIImage.swift in Sources */,
+				E64C57E02B1495AC00002567 /* CountryFlags.swift in Sources */,
+				E674BB262B0CAE88003D6D71 /* ImageRendered.swift in Sources */,
 				E674BB222B0CA513003D6D71 /* CountryFlagsParser.swift in Sources */,
-				E674BB242B0CA552003D6D71 /* CountryFlag.swift in Sources */,
+				E674BB242B0CA552003D6D71 /* CountryFlagInfo.swift in Sources */,
 				E674BB1A2B0CA1CA003D6D71 /* FlagType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,7 @@ import CountryFlag
 struct CustomTextField: View {
 
     @Binding var selectedSegment: Int
-    @Binding var currentCountry: CountryFlag
+    @Binding var currentCountry: CountryFlagInfo
     private let maxCharCount = 15
     @State var text = ""
 
@@ -47,8 +47,8 @@ struct CustomTextField: View {
 }
 
 struct ListOfCountries: View {
-    var allCountries: [CountryFlag]
-    @Binding var currentCountry: CountryFlag
+    var allCountries: [CountryFlagInfo]
+    @Binding var currentCountry: CountryFlagInfo
     @Binding var selectedSegment: Int
 
     var body: some View {
@@ -85,13 +85,13 @@ struct FlagTypePicker: View {
 
 
 struct ContentView: View {
-    @State var currentCountry: CountryFlag
+    @State var currentCountry: CountryFlagInfo
     @State private var selectedSegment = 0
     @State private var text = ""
-    private var allCountries = CountryFlags().all
+    private var allCountries = CountryFlagInfo.all
 
     init() {
-        currentCountry = allCountries.first ?? CountryFlag.defaultValue
+        currentCountry = allCountries.first ?? CountryFlagInfo.defaultValue
     }
 
     var body: some View {
@@ -110,7 +110,7 @@ struct ContentView: View {
 
         }
         .onAppear(perform: {
-            currentCountry = allCountries.first ?? CountryFlag.defaultValue
+            currentCountry = allCountries.first ?? CountryFlagInfo.defaultValue
             text = currentCountry.countryDialCode
         })
         .padding()
