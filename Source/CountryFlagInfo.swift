@@ -15,7 +15,7 @@ extension CountryFlagInfo {
     /// - Parameter type: Image display type: FlagType
     /// - Returns: SwiftUI flag image
     public func getCountryImage(with type: FlagType = .roundedRect) -> some View {
-        let image = Image(countryCode, bundle: CountryFlags.assetBundle)
+        let image = Image(code, bundle: CountryFlags.assetBundle)
         return image.applyFlagType(type)
     }
 }
@@ -29,7 +29,7 @@ extension CountryFlagInfo {
     /// - Parameter type: Image display type: FlagType
     /// - Returns: UIKit flag image
     public func getCountryImage(with type: FlagType = .roundedRect) -> UIImage? {
-        guard let image = UIImage(named: countryCode, in: CountryFlags.assetBundle, compatibleWith: nil) else {
+        guard let image = UIImage(named: code, in: CountryFlags.assetBundle, compatibleWith: nil) else {
             return nil
         }
 
@@ -48,32 +48,33 @@ extension CountryFlagInfo {
     }
 }
 
-extension CountryFlagInfo {
-    public static var defaultValue: CountryFlagInfo {
-        Self(countryCode: "AU", countryName: "Australia", countryDialCode: "+61")
-    }
-}
-
 public struct CountryFlagInfo: Decodable, Hashable {
     /**
      Country 2 letter code
      */
-    public let countryCode: String
+    public let code: String
 
     /**
      Country name
      */
-    public let countryName: String
+    public let name: String
 
     /**
      Country dial-code
      */
-    public let countryDialCode: String
+    public let dialCode: String
+
+
+    public init(code: String, name: String, dialCode: String) {
+        self.code = code
+        self.name = name
+        self.dialCode = dialCode
+    }
 
     enum CodingKeys: String, CodingKey {
-        case countryCode = "code"
-        case countryName = "name"
-        case countryDialCode = "dial_code"
+        case code = "code"
+        case name = "name"
+        case dialCode = "dial_code"
     }
 }
 

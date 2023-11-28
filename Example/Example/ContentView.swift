@@ -12,8 +12,9 @@ struct CustomTextField: View {
 
     @Binding var selectedSegment: Int
     @Binding var currentCountry: CountryFlagInfo
+
+    @State private var text = ""
     private let maxCharCount = 15
-    @State var text = ""
 
     var body: some View {
         HStack {
@@ -26,27 +27,28 @@ struct CustomTextField: View {
                 .foregroundColor(.black)
         }
         .onChange(of: currentCountry) { value in
-            text = value.countryDialCode
+            text = value.dialCode
         }
         .onChange(of: text) { value in
-            if value.count < currentCountry.countryDialCode.count {
-                text = currentCountry.countryDialCode
+            if value.count < currentCountry.dialCode.count {
+                text = currentCountry.dialCode
             }
             if value.count > maxCharCount {
                 text = String(value.prefix(maxCharCount))
             }
             text = text.filter {"+0123456789".contains($0)}
         }
-        .onAppear(perform: {
-            text = currentCountry.countryDialCode
-        })
+        .onAppear {
+            text = currentCountry.dialCode
+        }
         .padding()
-        .background(Color(.white))
+        .background(Color.white)
         .cornerRadius(6)
     }
 }
 
-struct ListOfCountries: View {
+struct CountriesPicker: View {
+
     var allCountries: [CountryFlagInfo]
     @Binding var currentCountry: CountryFlagInfo
     @Binding var selectedSegment: Int
@@ -58,8 +60,8 @@ struct ListOfCountries: View {
                     HStack {
                         country.getCountryImage(with: FlagType(rawValue: selectedSegment) ?? .roundedRect)
                             .frame(width: 30)
-                        Text(country.countryName)
-                        Text(country.countryDialCode)
+                        Text(country.name)
+                        Text(country.dialCode)
                     }
                 }
             }
@@ -68,9 +70,10 @@ struct ListOfCountries: View {
     }
 }
 
-
 struct FlagTypePicker: View {
+
     @Binding var selectedSegment: Int
+
     var body: some View {
         VStack {
             Picker(selection: $selectedSegment, label: Text("")) {
@@ -83,37 +86,35 @@ struct FlagTypePicker: View {
     }
 }
 
-
 struct ContentView: View {
-    @State var currentCountry: CountryFlagInfo
+
+    @State var currentCountry = CountryFlagInfo(code: "", name: "", dialCode: "")
     @State private var selectedSegment = 0
     @State private var text = ""
     private var allCountries = CountryFlagInfo.all
 
-    init() {
-        currentCountry = allCountries.first ?? CountryFlagInfo.defaultValue
-    }
-
     var body: some View {
-        VStack {
-            Text("Flag Type")
-                .font(.title2)
+        if !allCountries.isEmpty {
+            VStack {
+                Text("Flag Type")
+                    .font(.title2)
 
-            VStack(spacing: 30) {
-                FlagTypePicker(selectedSegment: $selectedSegment)
                 VStack {
+                    FlagTypePicker(selectedSegment: $selectedSegment)
+                        .padding(.bottom, 20)
                     CustomTextField(selectedSegment: $selectedSegment, currentCountry: $currentCountry)
-                    ListOfCountries(allCountries: allCountries, currentCountry: $currentCountry, selectedSegment: $selectedSegment)
+                    CountriesPicker(allCountries: allCountries, currentCountry: $currentCountry, selectedSegment: $selectedSegment)
                     Spacer()
                 }
             }
-
+            .onAppear {
+                if let first = allCountries.first {
+                    currentCountry = first
+                    text = first.dialCode
+                }
+            }
+            .padding()
         }
-        .onAppear(perform: {
-            currentCountry = allCountries.first ?? CountryFlagInfo.defaultValue
-            text = currentCountry.countryDialCode
-        })
-        .padding()
     }
 }
 

@@ -30,7 +30,7 @@ internal extension UIImage {
 
 internal extension UIImage {
     func applyFlagType(_ type: FlagType) -> UIImage {
-        return self.rendereredImage(size: type.size, action: { (context) in
+        self.rendereredImage(size: type.size) { (context) in
             switch type {
             case .roundedRect:
                 let path = UIBezierPath(roundedRect: context.format.bounds, cornerRadius: 2)
@@ -42,7 +42,7 @@ internal extension UIImage {
                 let path = UIBezierPath(roundedRect: context.format.bounds, cornerRadius: type.size.width)
                 path.addClip()
             }
-        })
+        }
     }
 }
 
@@ -53,20 +53,21 @@ internal extension UIImage {
 import SwiftUI
 
 internal extension Image {
+    @ViewBuilder
     func applyFlagType(_ type: FlagType) -> some View {
         switch type {
         case .circle:
-            return AnyView(self
+            self
                 .frame(width: type.size.width, height: type.size.height)
-                .clipShape(Circle()))
+                .clipShape(Circle())
         case .square:
-            return AnyView(self
+            self
                 .frame(width: type.size.width, height: type.size.height)
-                .clipShape(Rectangle()))
+                .clipShape(Rectangle())
         case .roundedRect:
-            return AnyView(self
+            self
                 .frame(width: type.size.width, height: type.size.height)
-                .clipShape(RoundedRectangle(cornerRadius: 2)))
+                .clipShape(RoundedRectangle(cornerRadius: 2))
         }
     }
 }
