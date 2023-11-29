@@ -1,15 +1,15 @@
 Pod::Spec.new do |s|
-  s.name             = "ExyteAnimatedTabBar"
-  s.version          = "0.1.1"
+  s.name             = "ExyteFlagAndCountryCode"
+  s.version          = "0.0.1"
   s.summary          = "AnimatedTabBar is a tabbar with number of preset animations written in pure SwiftUI"
 
-  s.homepage         = 'https://github.com/exyte/AnimatedTabBar.git'
+  s.homepage         = 'https://github.com/exyte/FlagAndCountryCode.git'
   s.license          = 'MIT'
   s.author           = { 'Exyte' => 'info@exyte.com' }
-  s.source           = { :git => 'https://github.com/exyte/AnimatedTabBar.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/exyte/FlagAndCountryCode.git', :tag => s.version.to_s }
   s.social_media_url = 'http://exyte.com'
 
-  s.ios.deployment_target = '16.0'
+  s.ios.deployment_target = '15.0'
   
   s.requires_arc = true
   s.swift_version = "5.7"
