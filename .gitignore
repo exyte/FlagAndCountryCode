@@ -128,3 +128,4 @@ iOSInjectionProject/
 # End of https://www.gitignore.io/api/swift,macos,carthage,cocoapods
 Package.resolved
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.DS_Store
