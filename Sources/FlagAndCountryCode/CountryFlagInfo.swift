@@ -15,7 +15,7 @@ extension CountryFlagInfo {
     /// - Parameter type: Image display type: FlagType
     /// - Returns: SwiftUI flag image
     public func getCountryImage(with type: FlagType = .roundedRect) -> some View {
-        let image = Image(code, bundle: CountryFlags.assetBundle)
+        let image = Image(code, bundle: Bundle.current)
         return image.applyFlagType(type)
     }
 }
@@ -29,7 +29,7 @@ extension CountryFlagInfo {
     /// - Parameter type: Image display type: FlagType
     /// - Returns: UIKit flag image
     public func getCountryImage(with type: FlagType = .roundedRect) -> UIImage? {
-        guard let image = UIImage(named: code, in: CountryFlags.assetBundle, compatibleWith: nil) else {
+        guard let image = UIImage(named: code, in: Bundle.current, compatibleWith: nil) else {
             return nil
         }
 

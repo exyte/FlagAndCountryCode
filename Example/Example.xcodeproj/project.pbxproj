@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E605DC0D2B187EE8001C9EE7 /* FlagAndCountryCode in Frameworks */ = {isa = PBXBuildFile; productRef = E605DC0C2B187EE8001C9EE7 /* FlagAndCountryCode */; };
 		E674BB662B10702D003D6D71 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BB652B10702D003D6D71 /* ExampleApp.swift */; };
 		E674BB682B10702D003D6D71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BB672B10702D003D6D71 /* ContentView.swift */; };
 		E674BB6A2B10702F003D6D71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E674BB692B10702F003D6D71 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E605DC0A2B187E9F001C9EE7 /* FlagAndCountryCode */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FlagAndCountryCode; path = ..; sourceTree = "<group>"; };
 		E674BB622B10702D003D6D71 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E674BB652B10702D003D6D71 /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
 		E674BB672B10702D003D6D71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,17 +30,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E605DC0D2B187EE8001C9EE7 /* FlagAndCountryCode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E605DC0B2B187EE8001C9EE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E674BB592B10702D003D6D71 = {
 			isa = PBXGroup;
 			children = (
+				E605DC0A2B187E9F001C9EE7 /* FlagAndCountryCode */,
 				E674BB642B10702D003D6D71 /* Example */,
 				E674BB632B10702D003D6D71 /* Products */,
+				E605DC0B2B187EE8001C9EE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +106,9 @@
 			dependencies = (
 			);
 			name = Example;
+			packageProductDependencies = (
+				E605DC0C2B187EE8001C9EE7 /* FlagAndCountryCode */,
+			);
 			productName = Example;
 			productReference = E674BB622B10702D003D6D71 /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -297,7 +312,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lashlyn23.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = exyte.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -326,7 +341,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lashlyn23.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = exyte.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -356,6 +371,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E605DC0C2B187EE8001C9EE7 /* FlagAndCountryCode */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FlagAndCountryCode;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E674BB5A2B10702D003D6D71 /* Project object */;
 }

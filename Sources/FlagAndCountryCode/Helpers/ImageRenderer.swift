@@ -48,7 +48,6 @@ internal extension UIImage {
 
 #endif
 
-
 #if canImport(SwiftUI)
 import SwiftUI
 
@@ -71,6 +70,5 @@ internal extension Image {
         }
     }
 }
-
 
 #endif

@@ -5,7 +5,7 @@
 //  Created by vadim.vitkovskiy on 24.11.2023.
 //
 
-import CountryFlag
+import FlagAndCountryCode
 
 extension FlagType {
     var displayName: String {

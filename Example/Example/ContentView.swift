@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CountryFlag
+import FlagAndCountryCode
 
 struct CustomTextField: View {
 
@@ -88,7 +88,7 @@ struct FlagTypePicker: View {
 
 struct ContentView: View {
 
-    @State var currentCountry = CountryFlagInfo(code: "", name: "", dialCode: "")
+    @State private var currentCountry = CountryFlagInfo(code: "", name: "", dialCode: "")
     @State private var selectedSegment = 0
     @State private var text = ""
     private var allCountries = CountryFlagInfo.all
