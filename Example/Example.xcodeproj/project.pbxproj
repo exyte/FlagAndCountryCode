@@ -11,19 +11,8 @@
 		E674BB682B10702D003D6D71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BB672B10702D003D6D71 /* ContentView.swift */; };
 		E674BB6A2B10702F003D6D71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E674BB692B10702F003D6D71 /* Assets.xcassets */; };
 		E674BB6D2B10702F003D6D71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E674BB6C2B10702F003D6D71 /* Preview Assets.xcassets */; };
-		E674BB7A2B107049003D6D71 /* CountryFlag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E674BB782B10703E003D6D71 /* CountryFlag.framework */; };
 		E674BB7F2B10719F003D6D71 /* FlagType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BB7E2B10719F003D6D71 /* FlagType+Extensions.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E674BB772B10703E003D6D71 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E674BB732B10703E003D6D71 /* CountryFlag.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E674BAEB2B0C9FC5003D6D71;
-			remoteInfo = CountryFlag;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E674BB622B10702D003D6D71 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,7 +20,6 @@
 		E674BB672B10702D003D6D71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E674BB692B10702F003D6D71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E674BB6C2B10702F003D6D71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E674BB732B10703E003D6D71 /* CountryFlag.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CountryFlag.xcodeproj; path = ../CountryFlag.xcodeproj; sourceTree = "<group>"; };
 		E674BB7E2B10719F003D6D71 /* FlagType+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlagType+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,7 +28,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E674BB7A2B107049003D6D71 /* CountryFlag.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,10 +37,8 @@
 		E674BB592B10702D003D6D71 = {
 			isa = PBXGroup;
 			children = (
-				E674BB732B10703E003D6D71 /* CountryFlag.xcodeproj */,
 				E674BB642B10702D003D6D71 /* Example */,
 				E674BB632B10702D003D6D71 /* Products */,
-				E674BB792B107049003D6D71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,21 +68,6 @@
 				E674BB6C2B10702F003D6D71 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		E674BB742B10703E003D6D71 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E674BB782B10703E003D6D71 /* CountryFlag.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E674BB792B107049003D6D71 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E674BB7B2B10717B003D6D71 /* Extensions */ = {
@@ -154,28 +124,12 @@
 			mainGroup = E674BB592B10702D003D6D71;
 			productRefGroup = E674BB632B10702D003D6D71 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = E674BB742B10703E003D6D71 /* Products */;
-					ProjectRef = E674BB732B10703E003D6D71 /* CountryFlag.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				E674BB612B10702D003D6D71 /* Example */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		E674BB782B10703E003D6D71 /* CountryFlag.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CountryFlag.framework;
-			remoteRef = E674BB772B10703E003D6D71 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E674BB602B10702D003D6D71 /* Resources */ = {
