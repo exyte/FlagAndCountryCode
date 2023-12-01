@@ -21,13 +21,13 @@ struct CustomTextField: View {
             currentCountry.getCountryImage(with: FlagType(rawValue: selectedSegment) ?? .roundedRect)
                 .frame(width: 30)
             Rectangle()
-                .foregroundColor(Color("accentColor1"))
+                .foregroundColor(.accentColor1)
                 .frame(width: 0.4, height: 30)
             TextField("", text: $text)
                 .keyboardType(.numberPad)
-                .padding(.leading, 8)
+                .padding(.horizontal, 8)
                 .font(.custom(FontHelper.ibmPlexMonoRegular.rawValue, size: 17))
-                .foregroundColor(Color("accentColor3"))
+                .foregroundColor(.accentColor3)
         }
         .onChange(of: currentCountry) { _, value in
             text = value.dialCode
@@ -44,9 +44,9 @@ struct CustomTextField: View {
         .onAppear {
             text = currentCountry.dialCode
         }
-        .accentColor(Color("accentColor4"))
+        .accentColor(.accentColor4)
         .padding()
-        .background(Color("accentColor2"))
+        .background(.accentColor2)
         .cornerRadius(6)
     }
 }
@@ -70,8 +70,8 @@ struct FlagTypePicker: View {
                         HStack {
                             Text(types[i].displayName)
                                 .textCase(.uppercase)
-                                .foregroundStyle(selectedIndex == i ? Color("backgroundColor") : Color("accentColor3"))
-                                .foregroundStyle(Color("accentColor3"))
+                                .foregroundStyle(selectedIndex == i ? .background : .accentColor3)
+                                .foregroundStyle(.accentColor3)
                                 .font(.custom(FontHelper.chakraPetchMedium.rawValue, size: 15))
                         }
                         .frame(width: g.size.width / 3 - 18)
@@ -79,7 +79,7 @@ struct FlagTypePicker: View {
                         .padding(.vertical, 14)
                         .background {
                             if selectedIndex == i {
-                                Capsule().fill(Color("accentColor4"))
+                                Capsule().fill(.accentColor4)
                                     .frame(height: 41)
                             }
                         }
@@ -96,11 +96,11 @@ struct FlagTypePicker: View {
 
             }
             .frame(width: g.size.width)
-            .background(Color("accentColor2"))
+            .background(.accentColor2)
             .clipShape(RoundedRectangle(cornerRadius: 24))
             .overlay (
                 RoundedRectangle(cornerRadius: 24)
-                    .stroke(Color("accentColor1"), lineWidth: 1)
+                    .stroke(.accentColor1, lineWidth: 1)
             )
         }
         .frame(height: 42)
@@ -120,30 +120,30 @@ struct CountriesPicker: View {
                     .frame(width: 30)
                 Text(country.name)
                     .font(.custom(FontHelper.chakraPetchRegular.rawValue, size: 18))
-                    .foregroundStyle(Color("accentColor3"))
+                    .foregroundStyle(.accentColor3)
                 Spacer()
                 Text(country.dialCode)
                     .font(.custom(FontHelper.ibmPlexMonoRegular.rawValue, size: 14))
-                    .foregroundStyle(Color("accentColor3"))
+                    .foregroundStyle(.accentColor3)
             }
             .contentShape(Rectangle())
             .onTapGesture {
                 currentCountry = country
             }
             .listRowSeparator(.hidden)
-            .listRowBackground(currentCountry == country ? Color("accentColor2") : Color.clear)
+            .listRowBackground(currentCountry == country ? .accentColor2 : Color.clear)
         }
         .padding(.vertical)
         .scrollIndicators(.hidden)
         .listStyle(PlainListStyle())
         .overlay (
-            LinearGradient(gradient: Gradient(colors: [Color("gradientColor").opacity(0.9),
-                                                       Color("gradientColor").opacity(0),
-                                                       Color("gradientColor").opacity(0.9)]),
+            LinearGradient(gradient: Gradient(colors: [.gradient.opacity(0.9),
+                                                       .gradient.opacity(0),
+                                                       .gradient.opacity(0.9)]),
                            startPoint: .top, endPoint: .bottom)
             .allowsHitTesting(false)
         )
-        .background(Color("gradientColor"))
+        .background(.gradient)
         .cornerRadius(30)
     }
 }
@@ -158,17 +158,15 @@ struct ContentView: View {
     var body: some View {
         if !allCountries.isEmpty {
             VStack(alignment: .leading) {
-                VStack(alignment: .leading){
-                    HeaderLabel(text: "Flag Type")
-                        .padding(.top, 8)
-                    FlagTypePicker(selectedType: $selectedSegment)
-                        .padding(.bottom, 40)
-                    HeaderLabel(text: "Country flag & country code")
-                    CustomTextField(selectedSegment: $selectedSegment, currentCountry: $currentCountry)
-                        .cornerRadius(16)
-                    CountriesPicker(allCountries: allCountries, currentCountry: $currentCountry, selectedSegment: $selectedSegment)
-                        .padding(.top, 32)
-                }
+                HeaderLabel(text: "Flag Type")
+                    .padding(.top, 8)
+                FlagTypePicker(selectedType: $selectedSegment)
+                    .padding(.bottom, 40)
+                HeaderLabel(text: "Country flag & country code")
+                CustomTextField(selectedSegment: $selectedSegment, currentCountry: $currentCountry)
+                    .cornerRadius(16)
+                CountriesPicker(allCountries: allCountries, currentCountry: $currentCountry, selectedSegment: $selectedSegment)
+                    .padding(.top, 32)
             }
             .padding(12)
             .onAppear {
@@ -187,9 +185,9 @@ struct HeaderLabel: View {
 
     var body: some View {
         Text(text)
-            .padding(.leading, 5)
+            .padding(.horizontal, 5)
             .textCase(.uppercase)
-            .foregroundStyle(Color("accentColor1"))
+            .foregroundStyle(.accentColor1)
             .font(.custom(FontHelper.chakraPetchMedium.rawValue, size: 15))
     }
 }
