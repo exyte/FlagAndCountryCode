@@ -20,16 +20,19 @@ struct CustomTextField: View {
         HStack {
             currentCountry.getCountryImage(with: FlagType(rawValue: selectedSegment) ?? .roundedRect)
                 .frame(width: 30)
-            Divider()
-                .frame(height: 15)
+            Rectangle()
+                .foregroundColor(Color("accentColor1"))
+                .frame(width: 0.4, height: 30)
             TextField("", text: $text)
                 .keyboardType(.numberPad)
-                .foregroundColor(.black)
+                .padding(.leading, 8)
+                .font(.custom(FontHelper.ibmPlexMonoRegular.rawValue, size: 17))
+                .foregroundColor(Color("accentColor3"))
         }
-        .onChange(of: currentCountry) { value in
+        .onChange(of: currentCountry) { _, value in
             text = value.dialCode
         }
-        .onChange(of: text) { value in
+        .onChange(of: text) { _, value in
             if value.count < currentCountry.dialCode.count {
                 text = currentCountry.dialCode
             }
@@ -41,9 +44,66 @@ struct CustomTextField: View {
         .onAppear {
             text = currentCountry.dialCode
         }
+        .accentColor(Color("accentColor4"))
         .padding()
-        .background(Color.white)
+        .background(Color("accentColor2"))
         .cornerRadius(6)
+    }
+}
+
+struct FlagTypePicker: View {
+
+    @Binding var selectedType: Int
+    @Namespace var namespace
+    @State var selectedIndex = 0
+    @State private var animationsRunning = false
+
+    private let types = FlagType.allCases
+    private let horPadding = 8.0
+    private let selectedWidth = 80.0
+
+    var body: some View {
+        GeometryReader { g in
+            ZStack {
+                HStack(spacing: 0) {
+                    ForEach(0..<types.count, id: \.self) { i in
+                        HStack {
+                            Text(types[i].displayName)
+                                .textCase(.uppercase)
+                                .foregroundStyle(selectedIndex == i ? Color("backgroundColor") : Color("accentColor3"))
+                                .foregroundStyle(Color("accentColor3"))
+                                .font(.custom(FontHelper.chakraPetchMedium.rawValue, size: 15))
+                        }
+                        .frame(width: g.size.width / 3 - 18)
+                        .padding(.horizontal, horPadding)
+                        .padding(.vertical, 14)
+                        .background {
+                            if selectedIndex == i {
+                                Capsule().fill(Color("accentColor4"))
+                                    .frame(height: 41)
+                            }
+                        }
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            withAnimation(.spring(.snappy(extraBounce: 0.3))) {
+                                selectedIndex = i
+                                selectedType = i
+                                animationsRunning.toggle()
+                            }
+                        }
+                    }
+                }
+
+            }
+            .frame(width: g.size.width)
+            .background(Color("accentColor2"))
+            .clipShape(RoundedRectangle(cornerRadius: 24))
+            .overlay (
+                RoundedRectangle(cornerRadius: 24)
+                    .stroke(Color("accentColor1"), lineWidth: 1)
+            )
+        }
+        .frame(height: 42)
     }
 }
 
@@ -54,35 +114,37 @@ struct CountriesPicker: View {
     @Binding var selectedSegment: Int
 
     var body: some View {
-        VStack {
-            Picker(selection: $currentCountry, label: Text("")) {
-                ForEach(allCountries, id: \.self) { country in
-                    HStack {
-                        country.getCountryImage(with: FlagType(rawValue: selectedSegment) ?? .roundedRect)
-                            .frame(width: 30)
-                        Text(country.name)
-                        Text(country.dialCode)
-                    }
-                }
+        List(allCountries, id: \.self) { country in
+            HStack {
+                country.getCountryImage(with: FlagType(rawValue: selectedSegment) ?? .roundedRect)
+                    .frame(width: 30)
+                Text(country.name)
+                    .font(.custom(FontHelper.chakraPetchRegular.rawValue, size: 18))
+                    .foregroundStyle(Color("accentColor3"))
+                Spacer()
+                Text(country.dialCode)
+                    .font(.custom(FontHelper.ibmPlexMonoRegular.rawValue, size: 14))
+                    .foregroundStyle(Color("accentColor3"))
             }
-            .pickerStyle(.wheel)
-        }
-    }
-}
-
-struct FlagTypePicker: View {
-
-    @Binding var selectedSegment: Int
-
-    var body: some View {
-        VStack {
-            Picker(selection: $selectedSegment, label: Text("")) {
-                ForEach(0 ..< FlagType.allCases.count, id: \.self) { index in
-                    Text(FlagType(rawValue: index)?.displayName ?? "")
-                }
+            .contentShape(Rectangle())
+            .onTapGesture {
+                currentCountry = country
             }
-            .pickerStyle(SegmentedPickerStyle())
+            .listRowSeparator(.hidden)
+            .listRowBackground(currentCountry == country ? Color("accentColor2") : Color.clear)
         }
+        .padding(.vertical)
+        .scrollIndicators(.hidden)
+        .listStyle(PlainListStyle())
+        .overlay (
+            LinearGradient(gradient: Gradient(colors: [Color("gradientColor").opacity(0.9),
+                                                       Color("gradientColor").opacity(0),
+                                                       Color("gradientColor").opacity(0.9)]),
+                           startPoint: .top, endPoint: .bottom)
+            .allowsHitTesting(false)
+        )
+        .background(Color("gradientColor"))
+        .cornerRadius(30)
     }
 }
 
@@ -95,26 +157,39 @@ struct ContentView: View {
 
     var body: some View {
         if !allCountries.isEmpty {
-            VStack {
-                Text("Flag Type")
-                    .font(.title2)
-
-                VStack {
-                    FlagTypePicker(selectedSegment: $selectedSegment)
-                        .padding(.bottom, 20)
+            VStack(alignment: .leading) {
+                VStack(alignment: .leading){
+                    HeaderLabel(text: "Flag Type")
+                        .padding(.top, 8)
+                    FlagTypePicker(selectedType: $selectedSegment)
+                        .padding(.bottom, 40)
+                    HeaderLabel(text: "Country flag & country code")
                     CustomTextField(selectedSegment: $selectedSegment, currentCountry: $currentCountry)
+                        .cornerRadius(16)
                     CountriesPicker(allCountries: allCountries, currentCountry: $currentCountry, selectedSegment: $selectedSegment)
-                    Spacer()
+                        .padding(.top, 32)
                 }
             }
+            .padding(12)
             .onAppear {
                 if let first = allCountries.first {
                     currentCountry = first
                     text = first.dialCode
                 }
             }
-            .padding()
         }
     }
 }
 
+struct HeaderLabel: View {
+
+    var text: String
+
+    var body: some View {
+        Text(text)
+            .padding(.leading, 5)
+            .textCase(.uppercase)
+            .foregroundStyle(Color("accentColor1"))
+            .font(.custom(FontHelper.chakraPetchMedium.rawValue, size: 15))
+    }
+}

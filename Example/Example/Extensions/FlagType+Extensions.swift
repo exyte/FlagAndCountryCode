@@ -11,7 +11,7 @@ extension FlagType {
     var displayName: String {
         switch self {
         case .roundedRect:
-            return "Rect"
+            return "Rectangle"
         case .square:
             return "Square"
         case .circle:
