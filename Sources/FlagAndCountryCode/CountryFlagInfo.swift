@@ -64,7 +64,6 @@ public struct CountryFlagInfo: Decodable, Hashable {
      */
     public let dialCode: String
 
-
     public init(code: String, name: String, dialCode: String) {
         self.code = code
         self.name = name
