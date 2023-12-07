@@ -4,9 +4,9 @@
 </picture></a> <a href="https://exyte.com/contacts"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/exyte/media/master/common/get-in-touch-dark.png" width="128" height="24" align="right"><img src="https://raw.githubusercontent.com/exyte/media/master/common/get-in-touch-light.png" width="128" height="24" align="right"></picture></a>
 
 <p float="left">
-  <img src="https://github.com/exyte/FlagAndCountryCode/assets/9447630/730867f6-4816-45d5-8e93-cbd0e150d20a" width="200" />
-  <img src="https://github.com/exyte/FlagAndCountryCode/assets/9447630/39f6b306-5e05-473d-9251-886c6b593eca" width="200" /> 
-  <img src="https://github.com/exyte/FlagAndCountryCode/assets/9447630/a58dab3f-fa9e-49a0-b9cd-e94df9fcdd6c" width="200" />
+  <img src="https://github.com/exyte/FlagAndCountryCode/assets/9447630/730867f6-4816-45d5-8e93-cbd0e150d20a" width="250" />
+  <img src="https://github.com/exyte/FlagAndCountryCode/assets/9447630/39f6b306-5e05-473d-9251-886c6b593eca" width="250" /> 
+  <img src="https://github.com/exyte/FlagAndCountryCode/assets/9447630/a58dab3f-fa9e-49a0-b9cd-e94df9fcdd6c" width="250" />
 </p>
 
 <p><h1 align="left">Flag And Country Code</h1></p>
