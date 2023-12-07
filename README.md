@@ -20,7 +20,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](https://opensource.org/licenses/MIT)
 
 # Usage
-Use static variable `all` to get general country info `CountryFlagInfo`:
+Use the static variable `all` to get general country info `CountryFlagInfo`:
 - name ("United States")             
 - 2 letter code ("US")    
 - dial code ("+1")    
@@ -30,14 +30,14 @@ import FlagAndCountryCode
 CountryFlagInfo.all
 ```
 
-Use `getCountryImage` on a `CountryFlagInfo` of choice, it has both UIKit and SwiftUI implementations, returning an `UIImage` and a `View` respectively. Pass your desired flag style as a parameter 
+Use `getCountryImage` on a `CountryFlagInfo` of choice. It has both UIKit and SwiftUI implementations, returning a `UIImage` and a `View` respectively. Pass your desired flag style as a parameter 
 ```swift
 currentCountry.getCountryImage(with: .roundedRect)
 ```
 
 ### Available flag types
 `roundedRect` - 21 x 15 with rounded corners  
-`square` - 15 x 15 with rounded corners
+`square` - 15 x 15 with rounded corners  
 `circle` - 15 x 15    
 
 ## Examples
