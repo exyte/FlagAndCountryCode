@@ -18,7 +18,7 @@ internal extension UIImage {
         return renderer.image(actions: { (context) in
             action(context)
 
-            // Draw image centered in the renderer
+            // Draw a centered image using the renderer
             let bounds = context.format.bounds
             let rect = CGRect(x: (bounds.size.width - size.width) / 2,
                               y: (bounds.size.height - size.height) / 2,

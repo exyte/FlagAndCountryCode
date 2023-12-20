@@ -9,8 +9,8 @@ import Foundation
 
 public class CountryFlagsParser {
     
-    /// Get Country-Flags  from JSON
-    /// - Returns: Array of countryFlags
+    /// Get country flags  from the bundled JSON
+    /// - Returns: Array of CountryFlagsInfo
     public func getParsedData() -> [CountryFlagInfo]? {
         guard let jsonPath = Bundle.module.path(forResource: "country-codes", ofType: "json") else { return nil }
         

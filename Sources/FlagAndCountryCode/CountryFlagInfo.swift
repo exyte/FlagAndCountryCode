@@ -11,7 +11,7 @@ import Foundation
 import SwiftUI
 
 extension CountryFlagInfo {
-    /// Get a specific image from assets depending on the image type
+    /// Get a specific image from the assets depending on the image type
     /// - Parameter type: Image display type: FlagType
     /// - Returns: SwiftUI flag image
     public func getCountryImage(with type: FlagType = .roundedRect) -> some View {
@@ -25,7 +25,7 @@ extension CountryFlagInfo {
 import UIKit
 
 extension CountryFlagInfo {
-    /// Get a specific image from assets depending on the image type
+    /// Get a specific image from the assets depending on the image type
     /// - Parameter type: Image display type: FlagType
     /// - Returns: UIKit flag image
     public func getCountryImage(with type: FlagType = .roundedRect) -> UIImage? {
