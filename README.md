@@ -20,7 +20,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](https://opensource.org/licenses/MIT)
 
 # Usage
-Use the static variable `all` to get general country info `CountryFlagInfo`:
+Use the static variable `all` to get the general country info in a `CountryFlagInfo` object:
 - name ("United States")             
 - 2 letter code ("US")    
 - dial code ("+1")    
@@ -30,7 +30,7 @@ import FlagAndCountryCode
 CountryFlagInfo.all
 ```
 
-Use `getCountryImage` on a `CountryFlagInfo` of choice. It has both UIKit and SwiftUI implementations, returning a `UIImage` and a `View` respectively. Pass your desired flag style as a parameter 
+Use `getCountryImage` on a `CountryFlagInfo` of choice. It has both UIKit and SwiftUI implementations, returning a `UIImage` and a `View` respectively. Pass your desired flag style as a parameter.
 ```swift
 currentCountry.getCountryImage(with: .roundedRect)
 ```
