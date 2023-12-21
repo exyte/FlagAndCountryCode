@@ -20,6 +20,8 @@ let package = Package(
         .target(
             name: "FlagAndCountryCode",
             resources: [
-                .copy("Resources/country-codes.json")])
+                .process("Resources")
+            ]
+        )
     ]
 )

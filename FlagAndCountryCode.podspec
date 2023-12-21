@@ -17,7 +17,10 @@ Pod::Spec.new do |s|
   s.source_files = [
      'Sources/*.h',
      'Sources/*.swift',
-     'Sources/**/*.swift'
+     'Sources/**/*.swift',
+     'SourcesFlagAndCountryCode/**/*.swift'
   ]
+
+  s.resources = "Sources/FlagAndCountryCode/Resources/**/*"
 
 end

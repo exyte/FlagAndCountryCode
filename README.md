@@ -3,11 +3,21 @@
 <a href="https://exyte.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/exyte/media/master/common/our-site-dark.png" width="80" height="16"><img src="https://raw.githubusercontent.com/exyte/media/master/common/our-site-light.png" width="80" height="16"></picture></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/exyteHQ"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/exyte/media/master/common/twitter-dark.png" width="74" height="16"><img src="https://raw.githubusercontent.com/exyte/media/master/common/twitter-light.png" width="74" height="16">
 </picture></a> <a href="https://exyte.com/contacts"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/exyte/media/master/common/get-in-touch-dark.png" width="128" height="24" align="right"><img src="https://raw.githubusercontent.com/exyte/media/master/common/get-in-touch-light.png" width="128" height="24" align="right"></picture></a>
 
-<p float="left">
-  <img src="https://github.com/exyte/FlagAndCountryCode/assets/9447630/730867f6-4816-45d5-8e93-cbd0e150d20a" width="250" />
-  <img src="https://github.com/exyte/FlagAndCountryCode/assets/9447630/39f6b306-5e05-473d-9251-886c6b593eca" width="250" /> 
-  <img src="https://github.com/exyte/FlagAndCountryCode/assets/9447630/a58dab3f-fa9e-49a0-b9cd-e94df9fcdd6c" width="250" />
-</p>
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <img src="https://github.com/exyte/FlagAndCountryCode/assets/9447630/07c4662f-9069-45d2-b8d8-5a7d7e3adeaa" />
+            </td>
+            <td>
+                <img src="https://github.com/exyte/FlagAndCountryCode/assets/9447630/3ee60227-5cbf-431b-881f-33262eb25bdd" />
+            </td>
+            <td>
+                <img src="https://github.com/exyte/FlagAndCountryCode/assets/9447630/e18f0e20-2738-410a-bfaa-69754bc86e7e" />
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 <p><h1 align="left">Flag And Country Code</h1></p>
 
@@ -20,19 +30,21 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](https://opensource.org/licenses/MIT)
 
 # Usage
-Use the static variable `all` to get the general country info in a `CountryFlagInfo` object:
-- name ("United States")             
-- 2 letter code ("US")    
-- dial code ("+1")    
+Use the static variable `all` to get the list of `CountryFlagInfo` objects:
 ```swift
 import FlagAndCountryCode
 
-CountryFlagInfo.all
+let countries = CountryFlagInfo.all
 ```
+
+Each `CountryFlagInfo` contains:
+`name` - like "United States"         
+`code` - 2 letter code ("US")    
+`dialCode` - dial code ("+1")    
 
 Use `getCountryImage` on a `CountryFlagInfo` of choice. It has both UIKit and SwiftUI implementations, returning a `UIImage` and a `View` respectively. Pass your desired flag style as a parameter.
 ```swift
-currentCountry.getCountryImage(with: .roundedRect)
+country.getCountryImage(with: .roundedRect)
 ```
 
 ### Available flag types
