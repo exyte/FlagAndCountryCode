@@ -7,31 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B25F2F42B3425E000BADA96 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25F2F22B3425E000BADA96 /* FontHelper.swift */; };
+		5B25F2F52B3425E000BADA96 /* FlagType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25F2F32B3425E000BADA96 /* FlagType+Extensions.swift */; };
+		5B25F2F82B3425E900BADA96 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25F2F72B3425E900BADA96 /* CustomTextField.swift */; };
+		5B25F2FA2B34262F00BADA96 /* FlagTypePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25F2F92B34262F00BADA96 /* FlagTypePicker.swift */; };
+		5B25F2FC2B34269E00BADA96 /* CountriesPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25F2FB2B34269E00BADA96 /* CountriesPicker.swift */; };
+		5B25F2FE2B342E7D00BADA96 /* KeyboardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25F2FD2B342E7D00BADA96 /* KeyboardUtils.swift */; };
 		E605DC0D2B187EE8001C9EE7 /* FlagAndCountryCode in Frameworks */ = {isa = PBXBuildFile; productRef = E605DC0C2B187EE8001C9EE7 /* FlagAndCountryCode */; };
 		E64813EC2B19BAE900C13788 /* ChakraPetch-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E64813EA2B19BAE900C13788 /* ChakraPetch-Regular.ttf */; };
 		E64813ED2B19BAE900C13788 /* ChakraPetch-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E64813EB2B19BAE900C13788 /* ChakraPetch-Medium.ttf */; };
 		E64813F02B19BBAA00C13788 /* IBMPlexMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E64813EF2B19BBAA00C13788 /* IBMPlexMono-Regular.ttf */; };
-		E64813F32B19BC6F00C13788 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64813F22B19BC6F00C13788 /* FontHelper.swift */; };
 		E674BB662B10702D003D6D71 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BB652B10702D003D6D71 /* ExampleApp.swift */; };
 		E674BB682B10702D003D6D71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BB672B10702D003D6D71 /* ContentView.swift */; };
 		E674BB6A2B10702F003D6D71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E674BB692B10702F003D6D71 /* Assets.xcassets */; };
-		E674BB6D2B10702F003D6D71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E674BB6C2B10702F003D6D71 /* Preview Assets.xcassets */; };
-		E674BB7F2B10719F003D6D71 /* FlagType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674BB7E2B10719F003D6D71 /* FlagType+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B25F2F22B3425E000BADA96 /* FontHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		5B25F2F32B3425E000BADA96 /* FlagType+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlagType+Extensions.swift"; sourceTree = "<group>"; };
+		5B25F2F72B3425E900BADA96 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		5B25F2F92B34262F00BADA96 /* FlagTypePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagTypePicker.swift; sourceTree = "<group>"; };
+		5B25F2FB2B34269E00BADA96 /* CountriesPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesPicker.swift; sourceTree = "<group>"; };
+		5B25F2FD2B342E7D00BADA96 /* KeyboardUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardUtils.swift; sourceTree = "<group>"; };
 		E605DC0A2B187E9F001C9EE7 /* FlagAndCountryCode */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FlagAndCountryCode; path = ..; sourceTree = "<group>"; };
 		E64813EA2B19BAE900C13788 /* ChakraPetch-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Regular.ttf"; sourceTree = "<group>"; };
 		E64813EB2B19BAE900C13788 /* ChakraPetch-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Medium.ttf"; sourceTree = "<group>"; };
 		E64813EE2B19BB0500C13788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E64813EF2B19BBAA00C13788 /* IBMPlexMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexMono-Regular.ttf"; sourceTree = "<group>"; };
-		E64813F22B19BC6F00C13788 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		E674BB622B10702D003D6D71 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E674BB652B10702D003D6D71 /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
 		E674BB672B10702D003D6D71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E674BB692B10702F003D6D71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E674BB6C2B10702F003D6D71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E674BB7E2B10719F003D6D71 /* FlagType+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlagType+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +52,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B25F2F12B3425E000BADA96 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5B25F2F22B3425E000BADA96 /* FontHelper.swift */,
+				5B25F2F32B3425E000BADA96 /* FlagType+Extensions.swift */,
+				5B25F2FD2B342E7D00BADA96 /* KeyboardUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5B25F2F62B3425E900BADA96 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B25F2F92B34262F00BADA96 /* FlagTypePicker.swift */,
+				5B25F2F72B3425E900BADA96 /* CustomTextField.swift */,
+				5B25F2FB2B34269E00BADA96 /* CountriesPicker.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E605DC0B2B187EE8001C9EE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,14 +98,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		E64813F12B19BC6200C13788 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				E64813F22B19BC6F00C13788 /* FontHelper.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		E674BB592B10702D003D6D71 = {
 			isa = PBXGroup;
 			children = (
@@ -101,31 +119,14 @@
 		E674BB642B10702D003D6D71 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				E674BB6B2B10702F003D6D71 /* Preview Content */,
-				E64813F12B19BC6200C13788 /* Helpers */,
-				E64813EE2B19BB0500C13788 /* Info.plist */,
-				E674BB7B2B10717B003D6D71 /* Extensions */,
 				E64813E82B19BA7700C13788 /* Resources */,
+				5B25F2F12B3425E000BADA96 /* Utils */,
+				5B25F2F62B3425E900BADA96 /* Views */,
 				E674BB652B10702D003D6D71 /* ExampleApp.swift */,
 				E674BB672B10702D003D6D71 /* ContentView.swift */,
+				E64813EE2B19BB0500C13788 /* Info.plist */,
 			);
 			path = Example;
-			sourceTree = "<group>";
-		};
-		E674BB6B2B10702F003D6D71 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				E674BB6C2B10702F003D6D71 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		E674BB7B2B10717B003D6D71 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E674BB7E2B10719F003D6D71 /* FlagType+Extensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,7 +190,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E674BB6D2B10702F003D6D71 /* Preview Assets.xcassets in Resources */,
 				E674BB6A2B10702F003D6D71 /* Assets.xcassets in Resources */,
 				E64813F02B19BBAA00C13788 /* IBMPlexMono-Regular.ttf in Resources */,
 				E64813ED2B19BAE900C13788 /* ChakraPetch-Medium.ttf in Resources */,
@@ -205,9 +205,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E674BB682B10702D003D6D71 /* ContentView.swift in Sources */,
+				5B25F2F52B3425E000BADA96 /* FlagType+Extensions.swift in Sources */,
+				5B25F2F42B3425E000BADA96 /* FontHelper.swift in Sources */,
+				5B25F2FC2B34269E00BADA96 /* CountriesPicker.swift in Sources */,
 				E674BB662B10702D003D6D71 /* ExampleApp.swift in Sources */,
-				E64813F32B19BC6F00C13788 /* FontHelper.swift in Sources */,
-				E674BB7F2B10719F003D6D71 /* FlagType+Extensions.swift in Sources */,
+				5B25F2FE2B342E7D00BADA96 /* KeyboardUtils.swift in Sources */,
+				5B25F2F82B3425E900BADA96 /* CustomTextField.swift in Sources */,
+				5B25F2FA2B34262F00BADA96 /* FlagTypePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = FZXCM5CJ7P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -371,7 +375,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = FZXCM5CJ7P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

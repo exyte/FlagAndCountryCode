@@ -13,7 +13,6 @@ struct ExampleApp: App {
         WindowGroup {
             ContentView()
                 .preferredColorScheme(.dark)
-
         }
     }
 }
