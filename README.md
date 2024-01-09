@@ -37,7 +37,7 @@ import FlagAndCountryCode
 let countries = CountryFlagInfo.all
 ```
 
-Each `CountryFlagInfo` contains:
+Each `CountryFlagInfo` contains:     
 `name` - like "United States"         
 `code` - 2 letter code ("US")    
 `dialCode` - dial code ("+1")    
