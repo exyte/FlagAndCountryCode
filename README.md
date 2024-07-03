@@ -37,10 +37,12 @@ import FlagAndCountryCode
 let countries = CountryFlagInfo.all
 ```
 
-Each `CountryFlagInfo` contains:     
-`name` - like "United States"         
-`code` - 2 letter code ("US")    
-`dialCode` - dial code ("+1")    
+Each `CountryFlagInfo` contains:
+`name` - name of the country ("United States")     
+`code` - 2 letter country code ("US")    
+`dialCode` - dial code ("+1")     
+`languageNative` - original name of the language ("Español")  
+`languageEnglish` - name of the language in English ("Spanish")   
 
 Use `getCountryImage` on a `CountryFlagInfo` of choice. It has both UIKit and SwiftUI implementations, returning a `UIImage` and a `View` respectively. Pass your desired flag style as a parameter.
 ```swift

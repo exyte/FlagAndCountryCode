@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "FlagAndCountryCode"
-  s.version          = "1.0.2"
+  s.version          = "1.1.2"
   s.summary          = "FlagAndCountryCode is a collection of flags and other country-related metadata for custom phone picker components and other uses"
 
   s.homepage         = 'https://github.com/exyte/FlagAndCountryCode.git'
