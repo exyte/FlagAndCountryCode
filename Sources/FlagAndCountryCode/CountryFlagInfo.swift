@@ -64,16 +64,35 @@ public struct CountryFlagInfo: Decodable, Hashable {
      */
     public let dialCode: String
 
-    public init(code: String, name: String, dialCode: String) {
+    /**
+        Native language name
+     */
+    public let languageNative: String
+
+    /**
+        English language name
+     */
+    public let languageEnglish: String
+
+    public init(code: String,
+                name: String,
+                dialCode: String,
+                languageNative: String,
+                languageEnglish: String
+    ) {
         self.code = code
         self.name = name
         self.dialCode = dialCode
+        self.languageNative = languageEnglish
+        self.languageEnglish = languageEnglish
     }
 
     enum CodingKeys: String, CodingKey {
         case code = "code"
         case name = "name"
         case dialCode = "dial_code"
+        case languageEnglish = "language_english"
+        case languageNative = "language_native"
     }
 }
 
