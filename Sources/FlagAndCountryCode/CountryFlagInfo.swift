@@ -48,7 +48,7 @@ extension CountryFlagInfo {
     }
 }
 
-public struct CountryFlagInfo: Decodable, Hashable {
+public struct CountryFlagInfo: Codable, Hashable {
     /**
      Country 2 letter code
      */
@@ -85,6 +85,14 @@ public struct CountryFlagInfo: Decodable, Hashable {
         self.dialCode = dialCode
         self.languageNative = languageEnglish
         self.languageEnglish = languageEnglish
+    }
+
+    public init(languageEnglish: String, code: String) {
+        self.languageEnglish = languageEnglish
+        self.code = code
+        self.name = ""
+        self.dialCode = ""
+        self.languageNative = ""
     }
 
     enum CodingKeys: String, CodingKey {
