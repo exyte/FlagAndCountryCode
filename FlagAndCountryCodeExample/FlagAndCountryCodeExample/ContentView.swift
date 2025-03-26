@@ -10,7 +10,7 @@ import FlagAndCountryCode
 
 struct ContentView: View {
 
-    @State private var currentCountry = CountryFlagInfo(code: "", name: "", dialCode: "")
+    @State private var currentCountry = CountryFlagInfo(code: "", name: "", dialCode: "", languageNative: "", languageEnglish: "")
     @State private var selectedSegment = 0
     @State private var text = ""
     private var allCountries = CountryFlagInfo.all

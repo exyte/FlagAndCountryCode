@@ -24,9 +24,10 @@
 <p><h4>FlagAndCountryCode provides phone codes and flags for every country. Works on UIKit and SwiftUI</h4></p>
 
 ![](https://img.shields.io/github/v/tag/exyte/FlagAndCountryCode?label=Version)
-[![SPM Compatible](https://img.shields.io/badge/SwiftPM-Compatible-brightgreen.svg)](https://swiftpackageindex.com/exyte/FlagAndCountryCode)
-[![Cocoapods Compatible](https://img.shields.io/badge/cocoapods-Compatible-brightgreen.svg)](https://cocoapods.org/pods/FlagAndCountryCode)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fexyte%2FFlagAndCountryCode%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/exyte/FlagAndCountryCode)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fexyte%2FFlagAndCountryCode%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/exyte/FlagAndCountryCode)
+[![SPM](https://img.shields.io/badge/SPM-Compatible-brightgreen.svg)](https://swiftpackageindex.com/exyte/FlagAndCountryCode)
+[![Cocoapods](https://img.shields.io/badge/Cocoapods-Deprecated%20after%201.1.2-yellow.svg)](https://cocoapods.org/pods/FlagAndCountryCode)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](https://opensource.org/licenses/MIT)
 
 # Usage
@@ -58,7 +59,7 @@ country.getCountryImage(with: .roundedRect)
 
 To try the FlagAndCountryCode examples:
 - Clone the repo `https://github.com/exyte/FlagAndCountryCode.git`
-- Open Example/Example.xcodeproj
+- Open `FlagAndCountryCodeExample.xcodeproj` in the Xcode
 - Try it!
 
 ## Installation
@@ -69,22 +70,6 @@ To try the FlagAndCountryCode examples:
 dependencies: [
     .package(url: "https://github.com/exyte/FlagAndCountryCode.git")
 ]
-```
-
-### [CocoaPods](http://cocoapods.org)
-
-To install `FlagAndCountryCode`, simply add the following line to your Podfile:
-
-```ruby
-pod 'FlagAndCountryCode'
-```
-
-### [Carthage](http://github.com/Carthage/Carthage)
-
-To integrate `FlagAndCountryCode` into your Xcode project using Carthage, specify it in your `Cartfile`
-
-```ogdl
-github "Exyte/FlagAndCountryCode"
 ```
 
 ## Requirements
