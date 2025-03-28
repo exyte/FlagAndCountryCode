@@ -7,6 +7,63 @@
         "language_english": "Afghan"
     },
     {
+        "name": "United Arab Emirates",
+        "dial_code": "+971",
+        "code": "AE",
+        "language_native": "العربية",
+        "language_english": "Arabic"
+    },
+    {
+        "name": "Spain",
+        "dial_code": "+34",
+        "code": "ES",
+        "language_native": "Español",
+        "language_english": "Spanish"
+    },
+    {
+        "name": "Germany",
+        "dial_code": "+49",
+        "code": "DE",
+        "language_native": "Deutsch",
+        "language_english": "German"
+    },
+    {
+        "name": "United States",
+        "dial_code": "+1",
+        "code": "US",
+        "language_native": "English",
+        "language_english": "English"
+    },
+    {
+        "name": "Sweden",
+        "dial_code": "+46",
+        "code": "SE",
+        "language_native": "Svenska",
+        "language_english": "Swedish"
+    },
+    {
+        "name": "Portugal",
+        "dial_code": "+351",
+        "code": "PT",
+        "language_native": "Português",
+        "language_english": "Portuguese"
+
+    },
+    {
+        "name": "Belgium",
+        "dial_code": "+32",
+        "code": "BE",
+        "language_native": "Nederlands",
+        "language_english": "Dutch"
+    },
+    {
+        "name": "France",
+        "dial_code": "+33",
+        "code": "FR",
+        "language_native": "Français",
+        "language_english": "French"
+    },
+    {
         "name": "Aland Islands",
         "dial_code": "+358",
         "code": "AX",
@@ -138,13 +195,6 @@
         "code": "BY",
         "language_native": "беларускі",
         "language_english": "Belarusian"
-    },
-    {
-        "name": "Belgium",
-        "dial_code": "+32",
-        "code": "BE",
-        "language_native": "Nederlands",
-        "language_english": "Dutch"
     },
     {
         "name": "Belize",
@@ -497,13 +547,6 @@
         "language_english": "Finnish"
     },
     {
-        "name": "France",
-        "dial_code": "+33",
-        "code": "FR",
-        "language_native": "Français",
-        "language_english": "French"
-    },
-    {
         "name": "French Guiana",
         "dial_code": "+594",
         "code": "GF",
@@ -537,13 +580,6 @@
         "code": "GE",
         "language_native": "ქართული",
         "language_english": "Georgian"
-    },
-    {
-        "name": "Germany",
-        "dial_code": "+49",
-        "code": "DE",
-        "language_native": "Deutsch",
-        "language_english": "German"
     },
     {
         "name": "Ghana",
@@ -1208,14 +1244,6 @@
 
     },
     {
-        "name": "Portugal",
-        "dial_code": "+351",
-        "code": "PT",
-        "language_native": "Português",
-        "language_english": "Portuguese"
-
-    },
-    {
         "name": "Puerto Rico",
         "dial_code": "+1 939",
         "code": "PR",
@@ -1436,13 +1464,6 @@
 
     },
     {
-        "name": "Spain",
-        "dial_code": "+34",
-        "code": "ES",
-        "language_native": "Español",
-        "language_english": "Spanish"
-    },
-    {
         "name": "Sri Lanka",
         "dial_code": "+94",
         "code": "LK",
@@ -1476,13 +1497,6 @@
         "code": "SZ",
         "language_native": "English",
         "language_english": "English"
-    },
-    {
-        "name": "Sweden",
-        "dial_code": "+46",
-        "code": "SE",
-        "language_native": "Svenska",
-        "language_english": "Swedish"
     },
     {
         "name": "Switzerland",
@@ -1611,23 +1625,9 @@
         "language_english": "Ukrainian"
     },
     {
-        "name": "United Arab Emirates",
-        "dial_code": "+971",
-        "code": "AE",
-        "language_native": "العربية",
-        "language_english": "Arabic"
-    },
-    {
         "name": "United Kingdom",
         "dial_code": "+44",
         "code": "GB",
-        "language_native": "English",
-        "language_english": "English"
-    },
-    {
-        "name": "United States",
-        "dial_code": "+1",
-        "code": "US",
         "language_native": "English",
         "language_english": "English"
     },
